@@ -50,7 +50,8 @@ try{
     Add-Line $position '已接受目标（阶梯虚线）' 'TargetPosition' $orange -Target
     Add-Line $position '实际 NC 位置（圆点为采样）' 'ActualPosition' $blue
     for($i=0;$i -lt $rows.Count;$i++){
-        if($rows[$i].StopHeld -eq 'True' -and $rows[$i].StopDone -eq 'True'){
+        # 顺序读取可能跨周期；用相邻静止位置一致的观测点标注停止保持。
+        if($i+1 -lt $rows.Count -and $rows[$i].StopHeld -eq 'True' -and $rows[$i].StopDone -eq 'True' -and $rows[$i].Step -eq '61' -and [Math]::Abs([double]$rows[$i].ActualVelocity) -le 0.01 -and [Math]::Abs([double]$rows[$i+1].ActualPosition-[double]$rows[$i].ActualPosition) -le 0.000001){
             $position.Series[1].Points[$i].Label='停止保持 '+([double]$rows[$i].ActualPosition).ToString('0.00')+' mm'
             $position.Series[1].Points[$i].LabelForeColor=[Drawing.Color]::Black
             $position.Series[0].Points[$i].Label='已接受目标 80 mm'
