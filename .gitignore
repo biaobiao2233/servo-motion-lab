@@ -1,0 +1,36 @@
+# Machine-local tools, credentials and runtime state
+.local/
+.cache/
+runtime/
+raw-evidence/
+*.tclrs
+*.tclrq
+*.lic
+*.pfx
+*.key
+.env
+.env.*
+# Build output and vendor binaries
+**/bin/
+**/obj/
+**/node_modules/
+*.dll
+*.exe
+*.pdb
+*.plcproj.bak
+*.tsproj.bak
+*.compileinfo
+*.bootdata
+*.app
+*.crc
+*.tmc
+_Boot/
+# IDE/local state
+.vs/
+*.suo
+*.user
+*.userosscache
+*.tsproj.user
+*.plcproj.user
+*.orig
+*.rej
