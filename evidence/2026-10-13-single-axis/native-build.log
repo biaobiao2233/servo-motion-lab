@@ -1,0 +1,23 @@
+Pane: 源代码管理 - Team Foundation
+Output read failed: Unspecified error (Exception from HRESULT: 0x80004005 (E_FAIL))
+Pane: 生成
+The application is up to date
+Build complete -- 0 errors, 0 warnings : Ready for download
+生成 TMC 信息...
+导入符号信息 ...
+
+------ 已启动生成: 项目: ServoConfiguration, 配置: Release TwinCAT OS (x64) ------
+
+Pane: 生成顺序
+Output read failed: Unspecified error (Exception from HRESULT: 0x80004005 (E_FAIL))
+Pane: 源代码管理
+Output read failed: Unspecified error (Exception from HRESULT: 0x80004005 (E_FAIL))
+Pane: 调试
+Output read failed: Unspecified error (Exception from HRESULT: 0x80004005 (E_FAIL))
+Pane: TwinCAT
+
+Pane: External Types
+[上午 3:51:10] 库 'Tc3_GlobalTypes_MC, 1.0.0.0 (Beckhoff Automation GmbH)'已经被修改,并自动重新加载.
+
+Pane: General
+<repo>\.local\native-run-20261013-05\ServoConfiguration\ServoPLC\ServoPLC.plcproj : : 生成启动信息...

@@ -10,6 +10,8 @@ raw-evidence/
 *.key
 .env
 .env.*
+# Machine-generated XAE solution; source and generation tools are versioned.
+examples/ServoAxis-Demo/TwinCAT/
 # Build output and vendor binaries
 **/bin/
 **/obj/

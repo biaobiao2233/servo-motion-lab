@@ -1,0 +1,5 @@
+# Keep evidence/source hashes bound to the exact bytes that ran on Windows.
+examples/ServoAxis-Demo/src/*.st -text
+evidence/**/monitor.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
+tools/*.ps1 -text
+tools/*.psm1 -text

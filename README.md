@@ -3,7 +3,10 @@
 面向伺服与运动控制岗位的长期工程仓库，使用可复现的工程、代码和测试记录说明实际能力。
 首个示例是 **ServoAxis-Demo**：Beckhoff TwinCAT 3.1 Build 4026 的真实 NC/PTP 单轴仿真。
 
-**当前状态：仓库初始化；仿真工程尚未完成运行验收。没有硬件或运行证据的项目不会标记 PASS。**
+**当前状态：2026-10-13 已通过 NC/PTP 单轴仿真的最低运行验收。**
+手动 30→80→0 mm、自动顺序定位、运动中停止/保持/释放、−1/101 mm 越界拒绝及
+应用错误复位均有实际反馈。见 [验收报告](evidence/2026-10-13-single-axis/README.md)
+与 [操作说明](examples/ServoAxis-Demo/README.md)。原生 NC 故障注入和整机重启仍待验。
 
 ## 第一阶段：2026 年 10 月 22 日双选会展示版
 
@@ -18,10 +21,10 @@
 ## 仓库组织
 
 ```text
-examples/ServoAxis-Demo/    首个单轴示例，后续加入原生工程和 ST 源码
+examples/ServoAxis-Demo/    单轴 ST 源码与仿真操作说明
 docs/                      需求、架构、验证、路线图与展示说明
 evidence/                  经脱敏的环境/构建/实际运行证据
-tools/                     后续加入可复现的工程构建与检查工具
+tools/                     原生工程生成、专用 Runtime、控制命令与验收工具
 ```
 
 仓库：[biaobiao2233/servo-motion-lab](https://github.com/biaobiao2233/servo-motion-lab)。
