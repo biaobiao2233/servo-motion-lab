@@ -2,20 +2,48 @@
 
 TwinCAT 3.1 Build 4026 的 NC/PTP 单轴定位仿真示例。
 
-**2026-10-13 已完成最低功能运行验收：14 项检查通过。**
-详见 [实际反馈记录与曲线](../../evidence/2026-10-13-single-axis/README.md)。
+**真实 NC 单轴仿真已运行；TwinCAT 内置面板的 16 项交互检查通过。**
+详见 [当前内置面板证据](../../evidence/2026-10-13-native-visualization/README.md) 和
+[原单轴验收与曲线](../../evidence/2026-10-13-single-axis/README.md)。
 
 ## 工程结构
 
 `src` 内的 GVL_Command 是命令入口，GVL_Motion 包含 AXIS_REF，GVL_Monitor 保存
-在线反馈。FB_ServoAxis 周期调用 MC_Power、MC_Home、MC_MoveAbsolute、MC_Stop、
-MC_Reset，负责手动/自动状态机；MAIN 每周期调用它并复制实际 NC 位置、速度与状态。
+在线反馈。GVL_Hmi / FB_HmiAdapter 把原生面板点击转换为命令，空闲时保留 ADS 命令入口。
+FB_ServoAxis 周期调用 MC_Power、MC_Home、MC_MoveAbsolute、MC_Stop、MC_Reset，
+负责手动/自动状态机；MAIN 每周期调用适配层和控制块，复制实际 NC 位置、速度与状态。
 定时器只作超时保护，完成由功能块反馈决定。
 
 原生工程通过官方 Automation Interface 生成。厂商 DLL、SDK 互操作程序集、
 许可证和机器生成的完整工程保留本地；公开仓库提供 ST 与工具源码。
 `Create-DemoProject.ps1` 需要本机 XAE 及 Automation Interface 互操作程序集，
 可通过 `-InteropAssembly` 指定。本机用户态目标要求 **TwinCAT OS (x64)**。
+首次创建会导入 `visu/ServoDashboard.TcVIS`，已在新目录中实际创建、检查及构建成功。
+`-BuildExisting` 同步 ST，不替换已有画面；旧工程需要手动导入 TcVIS，或生成新工程。
+
+## TwinCAT 内置面板
+
+打开自己生成的 `ServoAxisDemo.sln`，在解决方案树展开
+`PLC → ServoPLC → ServoPLC项目 → VISUs`，双击 `ServoDashboard`。
+先核对专用目标、启动 Runtime，再用 PLC 菜单登录，确认 PLC 为 Run。
+画面离线时用于编辑，在线登录后才是可操作的实时画面。展示前读取状态并确认周期计数增加。
+
+1. 点「自动演示 30 → 80 → 0 mm」：适配层先等轴使能反馈，执行虚拟回零与三次定位。
+   观察实际位置、速度、步骤、Busy/Done 和完成次数。
+2. 点「定位到 80 mm」，运动中点「运动停止」。速度降到零后显示停止保持；
+   点「释放停止保持」才允许继续定位。
+3. 点「发送 101 mm · 越界拒绝」：Error 成立、ErrorID 为 `0xA001`，位置不改变。
+   点「错误复位」，不会自动重新运动。结束时定位到 0 mm 并撤销使能。
+
+手动模式先「轴使能」→「虚拟回零」，等待反馈；点击目标或速度数值，键盘输入后按 Enter，
+再点「执行手动定位」。目标输入范围 0～100 mm，速度输入范围 1～50 mm/s。
+数值显示的「已接受目标」与待发送的手动目标分别保存，修改输入不会立即发起运动。
+不满足状态条件的按钮会禁用，停止保持时定位按钮不能操作。
+
+该画面运行在 XAE 内置 Visualization；本轮未配置独立 PLC HMI / Web HMI。
+它显示 NC 仿真反馈；无驱动器时没有真实电流、温度、扭矩或 EtherCAT 状态。
+面板交互配置改编自 MTCS，来源、修改及 LGPL 许可见 [第三方说明](../../third_party/MTCS/README.md)。
+官方配置依据：[输入动作与数值输入](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/3524245643.html)。
 
 ## 启动和复演
 
@@ -38,6 +66,8 @@ AMS 标识 `127.0.0.1.10.22`，通过官方界面激活配置、生成试用许�
 `Install-DemoBoot.ps1` 可在专用实例停止后，备份并安装与成功构建报告匹配的 Boot 文件。
 
 ## 现场演示
+
+优先使用上面的内置面板。以下命令保留为调试与自动验收入口；不要同时从两处发命令。
 
 ```powershell
 # 使能、虚拟回零，执行 30→80→0 mm 自动序列

@@ -1,0 +1,102 @@
+Pane: 源代码管理 - Team Foundation
+Output read failed: Unspecified error (Exception from HRESULT: 0x80004005 (E_FAIL))
+Pane: 生成
+The application is up to date
+Build complete -- 0 errors, 0 warnings : Ready for download
+------ 已启动生成: 项目: ServoConfiguration, 配置: Release TwinCAT OS (x64) ------
+========= “生成”: 2 成功或最新，0失败，0 已跳过 ===========
+========== 生成 于 上午 6:54 完成，耗时 01.176 秒 ==========
+
+Pane: 生成顺序
+Output read failed: Unspecified error (Exception from HRESULT: 0x80004005 (E_FAIL))
+Pane: 源代码管理
+Output read failed: Unspecified error (Exception from HRESULT: 0x80004005 (E_FAIL))
+Pane: 调试
+Output read failed: Unspecified error (Exception from HRESULT: 0x80004005 (E_FAIL))
+Pane: TwinCAT
+MSG | 13/10/2026  6:20:55 453 ms | 'TcOsSys' (50): TwinCAT System Start: AdsState: 5 NumProc: 20
+MSG | 13/10/2026  6:20:55 469 ms | 'License Server' (30): license validation status is Valid(3)
+MSG | 13/10/2026  6:20:55 539 ms | 'TcOsSys' (50): LoadExternalModules() Driver >TcNc< loaded and initialized.
+MSG | 13/10/2026  6:20:55 561 ms | 'License Server' (30): license validation status is Valid(3)
+MSG | 13/10/2026  6:20:55 947 ms | 'TcOsSys' (50): TwinCAT system start completed. AdsState: >5<
+MSG | 13/10/2026  6:28:44 407 ms | 'TcOsSys' (50): TwinCAT System Start: AdsState: 5 NumProc: 20
+MSG | 13/10/2026  6:28:44 416 ms | 'License Server' (30): license validation status is Valid(3)
+MSG | 13/10/2026  6:28:44 416 ms | 'TcOsSys' (50): LoadExternalModules() Driver >TcNc< loaded and initialized.
+MSG | 13/10/2026  6:28:44 437 ms | 'License Server' (30): license validation status is Valid(3)
+MSG | 13/10/2026  6:28:44 794 ms | 'TcOsSys' (50): TwinCAT system start completed. AdsState: >5<
+
+Pane: 源代码管理 - Git
+正在打开存储库:
+[LOCAL_REPO]
+
+Pane: General
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\ServoPLC.plcproj : : 生成启动信息...
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\ServoPLC.plcproj : : 生成启动信息...
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+[LOCAL_REPO]\.local\native-visu-20261013-03\ServoConfiguration\ServoPLC\VISUs\ServoDashboard.TcVIS : warning: 字体类型 '' 被使用但是当前没有类型被激活.可视化可能会错误显示.
+Visu: Visu_HandleEditboxResult: Event Editboxresult sent but no open Editbox is available, so do nothing
+Visu: Visu_HandleEditboxResult: Event Editboxresult sent but no open Editbox is available, so do nothing

@@ -3,10 +3,14 @@
 面向伺服与运动控制岗位的长期工程仓库，使用可复现的工程、代码和测试记录说明实际能力。
 首个示例是 **ServoAxis-Demo**：Beckhoff TwinCAT 3.1 Build 4026 的真实 NC/PTP 单轴仿真。
 
-**当前状态：2026-10-13 已通过 NC/PTP 单轴仿真的最低运行验收。**
-手动 30→80→0 mm、自动顺序定位、运动中停止/保持/释放、−1/101 mm 越界拒绝及
-应用错误复位均有实际反馈。见 [验收报告](evidence/2026-10-13-single-axis/README.md)
-与 [操作说明](examples/ServoAxis-Demo/README.md)。原生 NC 故障注入和整机重启仍待验。
+**当前状态：真实 NC/PTP 单轴仿真已运行，TwinCAT 内置操作面板已通过 16 项界面检查。**
+在原生 Visualization 中直接点击使能、回零、自动定位、运动停止、越界拒绝和复位；
+位置、速度、Busy/Done/Error 来自 PLC/NC 在线反馈。支持键盘输入目标位置与速度。
+见 [内置面板验收](evidence/2026-10-13-native-visualization/README.md)、
+[最初的单轴验收](evidence/2026-10-13-single-axis/README.md) 和
+[操作说明](examples/ServoAxis-Demo/README.md)。原生 NC 故障注入和整机重启仍待验。
+
+![TwinCAT 内置面板实拍](evidence/2026-10-13-native-visualization/panel.png)
 
 ## 第一阶段：2026 年 10 月 22 日双选会展示版
 
@@ -21,10 +25,11 @@
 ## 仓库组织
 
 ```text
-examples/ServoAxis-Demo/    单轴 ST 源码与仿真操作说明
+examples/ServoAxis-Demo/    单轴 ST、原生 TcVIS 面板与仿真操作说明
 docs/                      需求、架构、验证、路线图与展示说明
 evidence/                  经脱敏的环境/构建/实际运行证据
 tools/                     原生工程生成、专用 Runtime、控制命令与验收工具
+third_party/               复用面板交互配置的来源与许可证
 ```
 
 仓库：[biaobiao2233/servo-motion-lab](https://github.com/biaobiao2233/servo-motion-lab)。

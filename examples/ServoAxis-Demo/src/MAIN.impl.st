@@ -1,3 +1,4 @@
+hmi(); // 原生 Visualization 点击适配；不替代轴的 NC 反馈和运动状态机。
 servo(Axis := GVL_Motion.Axis,
       Enable := GVL_Command.Enable, Home := GVL_Command.Home,
       MoveRequest := GVL_Command.MoveRequest, AutoStart := GVL_Command.AutoStart,

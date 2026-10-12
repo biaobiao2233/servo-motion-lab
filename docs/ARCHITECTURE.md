@@ -8,13 +8,17 @@
 | NC/PTP Axis 1 | 原生仿真驱动与编码器、mm 单位、0～100 mm 位置限制 |
 | AXIS_REF | PLC 与 NC 的周期映射，实际位置与速度来自 NC |
 | FB_ServoAxis | 周期调用 PLCopen 块、命令沿、互锁、反馈和错误处理 |
-| MAIN | 周期调用 FB_ServoAxis 并复制监控；序列在 FB 内协调 |
-| GVL_Monitor / 变量表 | 输入命令、真实状态、步骤与 ErrorID |
+| MAIN | 周期调用界面适配层和 FB_ServoAxis，复制真实监控 |
+| ServoDashboard / GVL_Hmi | XAE 原生在线画面，按钮请求与手动目标/速度输入 |
+| FB_HmiAdapter | 消费一次点击请求，产生跨实际 PLC 周期的命令脉冲，等待使能反馈 |
+| GVL_Command / GVL_Monitor | 命令入口 / 真实状态、步骤与 ErrorID |
 | 验证采集 | 读取真实反馈并记录定位、停止、越界拒绝测试 |
 
 自动流程在每次运动 Done 后才推进；Stop 期间不发新运动命令。
 MC_Stop 的 Execute 保持/释放及 Busy 锁定依官方语义处理；复位不伪造轴就绪。
 仿真回零使用明确说明的官方回零模式，不暗示存在实体原点开关。
+画面不生成位置。界面适配层只做命令转换，核心状态转换和完成判断仍依 PLCopen 反馈。
+请求不符合就绪状态时拒绝；停止优先取消待发自动请求。数值输入与运动执行分开。
 
 所有 Runtime 运行入口都必须先证明目标为该任务独有实例；不能以默认本机 Runtime
 或旧已运行实例作为隐式目标。

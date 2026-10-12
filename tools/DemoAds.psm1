@@ -28,7 +28,7 @@ function New-DemoAdsClient {
 }
 function Read-DemoSymbol {
     param($Client,[string]$Name,[type]$Type)
-    if($Name -notmatch '^GVL_(Command|Monitor|Motion)\.') {throw 'Only demo symbols are allowed.'}
+    if($Name -notmatch '^GVL_(Command|Monitor|Motion|Hmi)\.') {throw 'Only demo symbols are allowed.'}
     $handle=$Client.CreateVariableHandle($Name)
     try{return $Client.ReadAny($handle,$Type)}finally{$Client.DeleteVariableHandle($handle)}
 }

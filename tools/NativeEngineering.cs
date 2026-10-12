@@ -32,13 +32,21 @@ public static class ServoNativeEngineering
         libraries.AddLibrary("Tc2_MC2", "3.3.75.0", "Beckhoff Automation GmbH");
         var pous = nested.CreateChild("POUs",601,"",null);
         var gvls = nested.CreateChild("GVLs",601,"",null);
-        foreach (string name in new[] { "GVL_Command", "GVL_Motion", "GVL_Monitor" })
+        foreach (string name in new[] { "GVL_Command", "GVL_Motion", "GVL_Monitor", "GVL_Hmi" })
         {
             var item = gvls.CreateChild(name,615,"",null);
             ((ITcPlcDeclaration)item).DeclarationText = File.ReadAllText(Path.Combine(sourceDirectory,name+".st"));
         }
         CreatePou(pous,"FB_ServoAxis",604,sourceDirectory);
+        CreatePou(pous,"FB_HmiAdapter",604,sourceDirectory);
         CreatePou(pous,"MAIN",602,sourceDirectory);
+        var visuSource=Path.Combine(Path.GetDirectoryName(sourceDirectory),"visu","ServoDashboard.TcVIS");
+        if(File.Exists(visuSource))
+        {
+            var visus=nested.CreateChild("VISUs",601,"",null);
+            // 58 imports an existing native PLC object; the file determines its visualization type.
+            visus.CreateChild("ServoDashboard",58,"",visuSource);
+        }
         var systemTask = manager.LookupTreeItem("TIRT").CreateChild("ServoTask",1,"",null);
         systemTask.ConsumeXml("<TreeItem><TaskDef><CycleTime>50000</CycleTime><Priority>20</Priority></TaskDef></TreeItem>");
         var plcTask = nested.CreateChild("ServoTask",621,"","MAIN");
@@ -95,14 +103,20 @@ public static class ServoNativeEngineering
         if(plc==null) throw new InvalidOperationException("The owned PLC root is unavailable.");
         var nested=((ITcProjectRoot)plc).NestedProject;
         if(nested==null) throw new InvalidOperationException("The owned nested PLC project is unavailable.");
-        foreach(string name in new[] { "GVL_Command", "GVL_Motion", "GVL_Monitor" })
-            ((ITcPlcDeclaration)nested.LookupChild("GVLs").LookupChild(name)).DeclarationText=File.ReadAllText(Path.Combine(sourceDirectory,name+".st"));
-        foreach(string name in new[] { "FB_ServoAxis", "MAIN" })
+        foreach(string name in new[] { "GVL_Command", "GVL_Motion", "GVL_Monitor", "GVL_Hmi" })
+            ((ITcPlcDeclaration)EnsureChild(nested.LookupChild("GVLs"),name,615,null)).DeclarationText=File.ReadAllText(Path.Combine(sourceDirectory,name+".st"));
+        foreach(string name in new[] { "FB_ServoAxis", "FB_HmiAdapter", "MAIN" })
         {
-            var item=nested.LookupChild("POUs").LookupChild(name);
+            var item=EnsureChild(nested.LookupChild("POUs"),name,name=="MAIN"?602:604,new object[] {1});
             ((ITcPlcDeclaration)item).DeclarationText=File.ReadAllText(Path.Combine(sourceDirectory,name+".decl.st"));
             ((ITcPlcImplementation)item).ImplementationText=File.ReadAllText(Path.Combine(sourceDirectory,name+".impl.st"));
         }
+    }
+
+    private static ITcSmTreeItem EnsureChild(ITcSmTreeItem parent,string name,int subtype,object info)
+    {
+        for(int i=1;i<=parent.ChildCount;i++) if(parent.Child[i].Name==name) return parent.Child[i];
+        return parent.CreateChild(name,subtype,"",info);
     }
 
     public static string CaptureBuildEvidence(object dteObject,string evidenceDirectory)
