@@ -1,0 +1,61 @@
+{
+  "Scope": "Historical 2026-10-13 animated candidate; verdicts cover the recorded ST/visualization/App only. No new cold-start, factory creation or core-regression verdict is inferred.",
+  "SourceFiles": [
+    {
+      "Name": "FB_HmiAdapter.decl.st",
+      "Sha256": "BDF88284C83E5950901A693A4B3194F7431236C236E2D7342CDA0F9126CF3BD9"
+    },
+    {
+      "Name": "FB_HmiAdapter.impl.st",
+      "Sha256": "4FF5EC66305EDD081039B8B09964094C6A1E19D463AA393B062F8315702BCC4F"
+    },
+    {
+      "Name": "FB_ServoAxis.decl.st",
+      "Sha256": "7CABCD7769E1AD4CECBF6DE5E93DAD08EA883229FC8F6DFA4DF9C9A5570ED39D"
+    },
+    {
+      "Name": "FB_ServoAxis.impl.st",
+      "Sha256": "579744ABFF3072121FF6F0034EC25A97CFB755072152D3C6826DD06959458433"
+    },
+    {
+      "Name": "GVL_Command.st",
+      "Sha256": "F269108E0F2A5EB6D06EEE9E7EC6DF634687F18E07310BF726046226C9450E23"
+    },
+    {
+      "Name": "GVL_Hmi.st",
+      "Sha256": "E3FC095CC82A4E76B0CB5F6538046EC167C4F336F5B7CA8B4863E5ADE6E36A36"
+    },
+    {
+      "Name": "GVL_Monitor.st",
+      "Sha256": "C4A81444C39EDCC8140B06602EC5B326FBE5020629C08DE9DC9470533DC7189B"
+    },
+    {
+      "Name": "GVL_Motion.st",
+      "Sha256": "6BCCE67C78D1BC10FA683A0A7AD1ADF9E21672FAF0A53B34984FD1AA9DE6F8A5"
+    },
+    {
+      "Name": "MAIN.decl.st",
+      "Sha256": "67D7393A8C96710DCA30CE8BA53E9C618512325C4BE58DB4B6D498C3C7382606"
+    },
+    {
+      "Name": "MAIN.impl.st",
+      "Sha256": "4BC032444DACECACD6AE66604CDBEF3EA2599D399746A0D7E5F23A0AA3E4ED95"
+    }
+  ],
+  "VisuSha256": "022BC8CFDB5F4D56A3AA927F538A1AA8429DDFCD96D14AE4D958502E16492C2E",
+  "PlcAppSha256": "7F98C6BE8777E8A8781DF22BECD50D9B8841BAF1A09429CA43208BFF4A8A30D7",
+  "NativeBuild": {
+    "StartedAt": "2026-10-13T09:17:36.9130047+08:00",
+    "BuildSuccess": true,
+    "PlcCheckResult": true,
+    "LastBuildInfo": 0,
+    "AxisBound": true,
+    "VisuSha256": "022BC8CFDB5F4D56A3AA927F538A1AA8429DDFCD96D14AE4D958502E16492C2E"
+  },
+  "Pending": [
+    "Current-candidate 14-item core regression",
+    "Public-source fresh creation/build check",
+    "Complete cold start via Start-ServoDemo.cmd",
+    "Independent 22-24 October showcase rehearsal"
+  ]
+}

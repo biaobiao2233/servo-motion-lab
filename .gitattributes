@@ -1,0 +1,9 @@
+# Keep evidence/source hashes bound to the exact bytes that ran on Windows.
+examples/ServoAxis-Demo/src/*.st -text
+# Preserve whitespace in the native xml:space archive, including its blank declaration line.
+examples/ServoAxis-Demo/visu/*.TcVIS -text whitespace=-blank-at-eol,space-before-tab,cr-at-eol
+evidence/**/monitor.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
+evidence/**/monitor-core.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
+evidence/**/monitor-animation.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
+tools/*.ps1 -text
+tools/*.psm1 -text

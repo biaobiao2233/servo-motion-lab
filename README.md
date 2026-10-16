@@ -3,9 +3,23 @@
 面向伺服与运动控制岗位的长期工程仓库，使用可复现的工程、代码和测试记录说明实际能力。
 首个示例是 **ServoAxis-Demo**：Beckhoff TwinCAT 3.1 Build 4026 的真实 NC/PTP 单轴仿真。
 
-**当前状态：仓库初始化；仿真工程尚未完成运行验收。没有硬件或运行证据的项目不会标记 PASS。**
+**当前状态：真实 NC/PTP 单轴仿真已运行，原生动画候选有 16 项界面检查及自定义速度实测记录。**
+在原生 Visualization 中直接点击使能、回零、自动定位、运动停止、越界拒绝和复位；
+位置、速度、Busy/Done/Error 来自 PLC/NC 在线反馈。支持键盘输入目标位置与速度。
+动画和自定义速度的10月13日记录见 [动画候选实测](evidence/2026-10-13-animated-demo/README.md)；
+本候选的完整核心回归、新建构建与冷启动入口仍待补验。
+此前记录见 [内置面板验收](evidence/2026-10-13-native-visualization/README.md)、
+[最初的单轴验收](evidence/2026-10-13-single-axis/README.md) 和
+[操作说明](examples/ServoAxis-Demo/README.md)。原生 NC 故障注入和整机重启仍待验。
 
-## 第一阶段：2026 年 10 月 22 日双选会展示版
+![TwinCAT 内置面板实拍](evidence/2026-10-13-native-visualization/panel.png)
+
+![真实 NC 仿真历史录制片段](evidence/2026-10-13-animated-demo/nc-motion-recording.gif)
+
+动图为一轮实际运动的原始捕获帧循环回放，没有插帧或生成位置；采样间隔不代表当前画面帧率。
+面向PLC/伺服岗位的 [作品说明卡](docs/INTERVIEW_CARD.md) 与 [10月22—24日展示计划](docs/SHOWCASE_PLAN.md)。
+
+## 第一阶段：2026 年 10 月 22—24 日线下展示版
 
 - 使用真实 NC/PTP 仿真轴和 AXIS_REF，不自行累加位置变量代替轴运动。
 - 使用 Tc2_MC2 / PLCopen 的 MC_Power、MC_Home、MC_MoveAbsolute、MC_Stop、MC_Reset。
@@ -18,10 +32,11 @@
 ## 仓库组织
 
 ```text
-examples/ServoAxis-Demo/    首个单轴示例，后续加入原生工程和 ST 源码
+examples/ServoAxis-Demo/    单轴 ST、原生 TcVIS 面板与仿真操作说明
 docs/                      需求、架构、验证、路线图与展示说明
 evidence/                  经脱敏的环境/构建/实际运行证据
-tools/                     后续加入可复现的工程构建与检查工具
+tools/                     原生工程生成、专用 Runtime、控制命令与验收工具
+third_party/               复用面板交互配置的来源与许可证
 ```
 
 仓库：[biaobiao2233/servo-motion-lab](https://github.com/biaobiao2233/servo-motion-lab)。

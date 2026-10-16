@@ -1,0 +1,56 @@
+﻿{
+    "Stage":  "COMPLETE",
+    "BuildSuccess":  true,
+    "PlcCheckResult":  true,
+    "BuildState":  3,
+    "LastBuildInfo":  0,
+    "Diagnostics":  [
+
+                    ],
+    "AxisBound":  true,
+    "BuildContexts":  [
+                          "ServoConfiguration\\ServoConfiguration.tsproj | ShouldBuild=True",
+                          "ServoConfiguration\\ServoPLC\\ServoPLC.plcproj | ShouldBuild=True"
+                      ],
+    "SourceFiles":  [
+                        {
+                            "Name":  "FB_ServoAxis.decl.st",
+                            "Sha256":  "476D2869457DA45E83E42D735E7D9592E738748B0C2FA56C1E7E5E08468C89F6",
+                            "NativeTextMatched":  true
+                        },
+                        {
+                            "Name":  "FB_ServoAxis.impl.st",
+                            "Sha256":  "600106B2A6D62722EAF7C4CEC70ADD5D8B05ECF48B61E71437949B4FB6F6F446",
+                            "NativeTextMatched":  true
+                        },
+                        {
+                            "Name":  "GVL_Command.st",
+                            "Sha256":  "61B587B3773221A3EE12EA15CDDF5BB5C47C808460F5751FAC6EE2860AFE0E06",
+                            "NativeTextMatched":  true
+                        },
+                        {
+                            "Name":  "GVL_Monitor.st",
+                            "Sha256":  "C4A81444C39EDCC8140B06602EC5B326FBE5020629C08DE9DC9470533DC7189B",
+                            "NativeTextMatched":  true
+                        },
+                        {
+                            "Name":  "GVL_Motion.st",
+                            "Sha256":  "6BCCE67C78D1BC10FA683A0A7AD1ADF9E21672FAF0A53B34984FD1AA9DE6F8A5",
+                            "NativeTextMatched":  true
+                        },
+                        {
+                            "Name":  "MAIN.decl.st",
+                            "Sha256":  "857D391F370C08B5849A75F2CE933F7BCE9CEF2A215A371B4B80702A40EF5AE5",
+                            "NativeTextMatched":  true
+                        },
+                        {
+                            "Name":  "MAIN.impl.st",
+                            "Sha256":  "7296EF37C21B32C26E87AA9A1ADDE087FFB26002AD871B3C08482A40D5FCD64C",
+                            "NativeTextMatched":  true
+                        }
+                    ],
+    "StartedAt":  "2026-10-13T03:50:44.1603134+08:00",
+    "CompletedAt":  "2026-10-13T03:51:37.1425633+08:00",
+    "TargetPlatform":  "TwinCAT OS (x64)",
+    "RuntimeNote":  "Configuration API request alone did not establish runtime success; motion verdict is from acceptance.json."
+}

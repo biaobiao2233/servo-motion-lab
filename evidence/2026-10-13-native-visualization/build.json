@@ -1,0 +1,82 @@
+{
+  "Schema": "servo-native-panel-build-v1",
+  "StartedAt": "2026-10-13T06:52:34.8675811+08:00",
+  "BuildSuccess": true,
+  "PlcCheckResult": true,
+  "BuildState": 3,
+  "LastBuildInfo": 0,
+  "BuildContexts": [
+    "ServoConfiguration\\ServoConfiguration.tsproj | ShouldBuild=True",
+    "ServoConfiguration\\ServoPLC\\ServoPLC.plcproj | ShouldBuild=True"
+  ],
+  "AxisBound": true,
+  "AxisMapping": "TINC^NC-Task SAF^Axes^ServoAxis^输出^ToPlc -> TIPC^ServoPLC^ServoPLC Instance^ServoTask Inputs^GVL_Motion.Axis.NcToPlc\nTIPC^ServoPLC^ServoPLC Instance^ServoTask Outputs^GVL_Motion.Axis.PlcToNc -> TINC^NC-Task SAF^Axes^ServoAxis^输入^FromPlc",
+  "VisuSha256": "4E62D86E506ABA1D48D438D16713221938D26B11355B9EB02001C332E44E3901",
+  "SourceFiles": [
+    {
+      "Name": "FB_HmiAdapter.decl.st",
+      "Sha256": "BDF88284C83E5950901A693A4B3194F7431236C236E2D7342CDA0F9126CF3BD9",
+      "NativeTextMatched": true
+    },
+    {
+      "Name": "FB_HmiAdapter.impl.st",
+      "Sha256": "A26C1D4781E90CB01FB79306AB79EDA4F22795EDAF2DFE4521938BFB83AA5679",
+      "NativeTextMatched": true
+    },
+    {
+      "Name": "FB_ServoAxis.decl.st",
+      "Sha256": "476D2869457DA45E83E42D735E7D9592E738748B0C2FA56C1E7E5E08468C89F6",
+      "NativeTextMatched": true
+    },
+    {
+      "Name": "FB_ServoAxis.impl.st",
+      "Sha256": "600106B2A6D62722EAF7C4CEC70ADD5D8B05ECF48B61E71437949B4FB6F6F446",
+      "NativeTextMatched": true
+    },
+    {
+      "Name": "GVL_Command.st",
+      "Sha256": "61B587B3773221A3EE12EA15CDDF5BB5C47C808460F5751FAC6EE2860AFE0E06",
+      "NativeTextMatched": true
+    },
+    {
+      "Name": "GVL_Hmi.st",
+      "Sha256": "5D9DBDE9771771C59CFBAEF11A2C6AA0023A99C90B8B62D5A7933A4E4310F673",
+      "NativeTextMatched": true
+    },
+    {
+      "Name": "GVL_Monitor.st",
+      "Sha256": "C4A81444C39EDCC8140B06602EC5B326FBE5020629C08DE9DC9470533DC7189B",
+      "NativeTextMatched": true
+    },
+    {
+      "Name": "GVL_Motion.st",
+      "Sha256": "6BCCE67C78D1BC10FA683A0A7AD1ADF9E21672FAF0A53B34984FD1AA9DE6F8A5",
+      "NativeTextMatched": true
+    },
+    {
+      "Name": "MAIN.decl.st",
+      "Sha256": "67D7393A8C96710DCA30CE8BA53E9C618512325C4BE58DB4B6D498C3C7382606",
+      "NativeTextMatched": true
+    },
+    {
+      "Name": "MAIN.impl.st",
+      "Sha256": "4BC032444DACECACD6AE66604CDBEF3EA2599D399746A0D7E5F23A0AA3E4ED95",
+      "NativeTextMatched": true
+    }
+  ],
+  "PlcAppSha256": "E1302E3F17EB2FD41E89D400D76BB8EE5DB389386D7F602AA40CEAB5F5422987",
+  "ConfigSha256": "EDB873712D7DA61062FDE0B50EE7B6E818BD7512DDB59B1E7A3A48C621E41D1E",
+  "FactoryCreation": {
+    "Stage": "COMPLETE",
+    "ProjectCreated": true,
+    "BuildExecuted": true,
+    "BuildSuccess": true,
+    "PlcCheckResult": true,
+    "LastBuildInfo": 0,
+    "AxisBound": true,
+    "ConfigurationActivationRequested": false,
+    "StartedAt": "2026-10-13T06:55:36.7485985+08:00",
+    "CompletedAt": "2026-10-13T06:56:15.3532706+08:00"
+  },
+  "FactoryVisualizationImported": true
+}
