@@ -1,0 +1,317 @@
+{
+  "Schema": "servo-animation-speed-v1",
+  "Result": "PASS",
+  "Runs": [
+    {
+      "RequestedSpeed": 20,
+      "Result": "PASS",
+      "ElapsedSeconds": 9.712554899999999,
+      "ObservedPeakVelocity": 20.00000000000056,
+      "CompletedMovesAdded": 3,
+      "Targets": [
+        30,
+        80,
+        0
+      ],
+      "CompletedAt": "2026-10-13T09:24:38.6998744+08:00"
+    },
+    {
+      "RequestedSpeed": 60,
+      "Result": "PASS",
+      "ElapsedSeconds": 4.639386,
+      "ObservedPeakVelocity": 60.00000000000018,
+      "CompletedMovesAdded": 3,
+      "Targets": [
+        30,
+        80,
+        0
+      ],
+      "CompletedAt": "2026-10-13T09:24:44.9184613+08:00"
+    }
+  ],
+  "Poses": [
+    {
+      "Result": "PASS",
+      "TargetPosition": 30,
+      "ActualPosition": 30,
+      "RenderedPositionEstimate": 30
+    },
+    {
+      "Result": "PASS",
+      "TargetPosition": 80,
+      "ActualPosition": 80,
+      "RenderedPositionEstimate": 80
+    },
+    {
+      "Result": "PASS",
+      "TargetPosition": 0,
+      "ActualPosition": 0,
+      "RenderedPositionEstimate": 0
+    }
+  ],
+  "Frames": [
+    {
+      "File": "60-041.bmp",
+      "ObservedAt": "2026-10-13T09:24:40.3995659+08:00",
+      "RequestedSpeed": 60,
+      "ActualPosition": 0,
+      "ActualVelocity": 0,
+      "RenderedPositionEstimate": 0,
+      "Step": 20,
+      "SourceBmpSha256": "FE16B359BD7212B34CC38E98E813C96319FCB19A1F616932A364B690599A51C9",
+      "PlaybackDelayCentiseconds": 23
+    },
+    {
+      "File": "60-042.bmp",
+      "ObservedAt": "2026-10-13T09:24:40.6321600+08:00",
+      "RequestedSpeed": 60,
+      "ActualPosition": 0.00010240000000000001,
+      "ActualVelocity": 0.007769753086419754,
+      "RenderedPositionEstimate": 0,
+      "Step": 50,
+      "SourceBmpSha256": "FE16B359BD7212B34CC38E98E813C96319FCB19A1F616932A364B690599A51C9",
+      "PlaybackDelayCentiseconds": 24
+    },
+    {
+      "File": "60-043.bmp",
+      "ObservedAt": "2026-10-13T09:24:40.8709359+08:00",
+      "RequestedSpeed": 60,
+      "ActualPosition": 3.0284800000000063,
+      "ActualVelocity": 32.88182145586082,
+      "RenderedPositionEstimate": 0,
+      "Step": 50,
+      "SourceBmpSha256": "825BAACB4D1FD27E0BFE8219E9DDCC0B50934A5EE829D2287E90050B4FDF394E",
+      "PlaybackDelayCentiseconds": 25
+    },
+    {
+      "File": "60-044.bmp",
+      "ObservedAt": "2026-10-13T09:24:41.1212543+08:00",
+      "RequestedSpeed": 60,
+      "ActualPosition": 10.759467200000017,
+      "ActualVelocity": 57.97840011704198,
+      "RenderedPositionEstimate": 4.285714285714286,
+      "Step": 50,
+      "SourceBmpSha256": "43BD54857D823FEA22ABEDF9D3F04EA37184C434AFE61EDBF99A587900D4B5FD",
+      "PlaybackDelayCentiseconds": 22
+    },
+    {
+      "File": "60-045.bmp",
+      "ObservedAt": "2026-10-13T09:24:41.3381282+08:00",
+      "RequestedSpeed": 60,
+      "ActualPosition": 24.05877920000002,
+      "ActualVelocity": 50.85040070965697,
+      "RenderedPositionEstimate": 15.142857142857142,
+      "Step": 50,
+      "SourceBmpSha256": "F666BCFBDF5DBF3EC117CA40A1D7321D8D144C64E27F6C642F4ACFF3FB55DDC9",
+      "PlaybackDelayCentiseconds": 25
+    },
+    {
+      "File": "60-046.bmp",
+      "ObservedAt": "2026-10-13T09:24:41.5843387+08:00",
+      "RequestedSpeed": 60,
+      "ActualPosition": 29.990668799999998,
+      "ActualVelocity": 1.3975999529632699,
+      "RenderedPositionEstimate": 29.714285714285715,
+      "Step": 50,
+      "SourceBmpSha256": "5D8A234BA892AF5DCB0C9097AA27859540F304B6480119B13E6CDB8151B274D1",
+      "PlaybackDelayCentiseconds": 27
+    },
+    {
+      "File": "60-047.bmp",
+      "ObservedAt": "2026-10-13T09:24:41.8502509+08:00",
+      "RequestedSpeed": 60,
+      "ActualPosition": 30.2519424,
+      "ActualVelocity": 5.7175941112766075,
+      "RenderedPositionEstimate": 30,
+      "Step": 50,
+      "SourceBmpSha256": "ECB818E6BA8474DF102E9F3D6035B0B510AAF59D2502631A9BE3B72C3BB37421",
+      "PlaybackDelayCentiseconds": 24
+    },
+    {
+      "File": "60-048.bmp",
+      "ObservedAt": "2026-10-13T09:24:42.0895361+08:00",
+      "RequestedSpeed": 60,
+      "ActualPosition": 43.38000160000002,
+      "ActualVelocity": 59.826400002120195,
+      "RenderedPositionEstimate": 34.57142857142857,
+      "Step": 50,
+      "SourceBmpSha256": "2AE11850F10554249231D9CDDDEBE095F5EAA9F2F5867AF8DE42696F986DEA2E",
+      "PlaybackDelayCentiseconds": 23
+    },
+    {
+      "File": "60-049.bmp",
+      "ObservedAt": "2026-10-13T09:24:42.3239221+08:00",
+      "RequestedSpeed": 60,
+      "ActualPosition": 54.18000000000003,
+      "ActualVelocity": 59.99999998700947,
+      "RenderedPositionEstimate": 45.42857142857143,
+      "Step": 50,
+      "SourceBmpSha256": "C1EB532F6EBD714B0FEE1455C533B7B52F199F396048A20A990171ED22F3F3FA",
+      "PlaybackDelayCentiseconds": 20
+    },
+    {
+      "File": "60-050.bmp",
+      "ObservedAt": "2026-10-13T09:24:42.5279140+08:00",
+      "RequestedSpeed": 60,
+      "ActualPosition": 69.39694714074078,
+      "ActualVelocity": 59.07824738531367,
+      "RenderedPositionEstimate": 57.714285714285715,
+      "Step": 50,
+      "SourceBmpSha256": "0AC7E802A4B0A36BA10C98C888EB872A47ED63E1E940DC8EF21F63F30A79A39A",
+      "PlaybackDelayCentiseconds": 23
+    },
+    {
+      "File": "60-051.bmp",
+      "ObservedAt": "2026-10-13T09:24:42.7570563+08:00",
+      "RequestedSpeed": 60,
+      "ActualPosition": 77.27034666666668,
+      "ActualVelocity": 36.02523946809445,
+      "RenderedPositionEstimate": 69.42857142857143,
+      "Step": 50,
+      "SourceBmpSha256": "4CECB86874C9FB42B3F88734A77D7DFC39883F5F276E6513FC2F3280EB13F4CF",
+      "PlaybackDelayCentiseconds": 23
+    },
+    {
+      "File": "60-052.bmp",
+      "ObservedAt": "2026-10-13T09:24:42.9906549+08:00",
+      "RequestedSpeed": 60,
+      "ActualPosition": 79.92740485925927,
+      "ActualVelocity": 4.13946548823927,
+      "RenderedPositionEstimate": 80,
+      "Step": 50,
+      "SourceBmpSha256": "4FD49B1D2B2EEC61C632250E68D428EDCFA943F0116092851FDFF95E962DEBB7",
+      "PlaybackDelayCentiseconds": 23
+    },
+    {
+      "File": "60-053.bmp",
+      "ObservedAt": "2026-10-13T09:24:43.2228340+08:00",
+      "RequestedSpeed": 60,
+      "ActualPosition": 79.0516736,
+      "ActualVelocity": -14.861599960599982,
+      "RenderedPositionEstimate": 78.85714285714286,
+      "Step": 50,
+      "SourceBmpSha256": "015509605F71DBDB996FF4EECE686E72A01EF34FCD534F9A03FE1D8A833D66B9",
+      "PlaybackDelayCentiseconds": 23
+    },
+    {
+      "File": "60-054.bmp",
+      "ObservedAt": "2026-10-13T09:24:43.4573863+08:00",
+      "RequestedSpeed": 60,
+      "ActualPosition": 69.00518239999998,
+      "ActualVelocity": -58.24240008127937,
+      "RenderedPositionEstimate": 71.71428571428571,
+      "Step": 50,
+      "SourceBmpSha256": "8D788B34F66E75E19021BC75C9A00D380BC637B7B4E05323546536491BEFD9E4",
+      "PlaybackDelayCentiseconds": 23
+    },
+    {
+      "File": "60-055.bmp",
+      "ObservedAt": "2026-10-13T09:24:43.6916561+08:00",
+      "RequestedSpeed": 60,
+      "ActualPosition": 52.81999999999997,
+      "ActualVelocity": -59.99999999986381,
+      "RenderedPositionEstimate": 60,
+      "Step": 50,
+      "SourceBmpSha256": "5E294AFFF3F40EE8DD53E21ABCF19760BC0E8B6BE07AF3601D4C1C7561DCFA92",
+      "PlaybackDelayCentiseconds": 24
+    },
+    {
+      "File": "60-056.bmp",
+      "ObservedAt": "2026-10-13T09:24:43.9362175+08:00",
+      "RequestedSpeed": 60,
+      "ActualPosition": 43.21999999999996,
+      "ActualVelocity": -59.99999999999998,
+      "RenderedPositionEstimate": 48.57142857142857,
+      "Step": 50,
+      "SourceBmpSha256": "0F795C06508EDF1593141AA4981296E9E06FB6C29472CF93DFA6813A4663781E",
+      "PlaybackDelayCentiseconds": 24
+    },
+    {
+      "File": "60-057.bmp",
+      "ObservedAt": "2026-10-13T09:24:44.1751360+08:00",
+      "RequestedSpeed": 60,
+      "ActualPosition": 27.379999999999953,
+      "ActualVelocity": -59.99999999999999,
+      "RenderedPositionEstimate": 36,
+      "Step": 50,
+      "SourceBmpSha256": "D3AD5958053D8E3468C5AA9E00D0283F416B0D399F50C1786D37B55413635478",
+      "PlaybackDelayCentiseconds": 25
+    },
+    {
+      "File": "60-058.bmp",
+      "ObservedAt": "2026-10-13T09:24:44.4236516+08:00",
+      "RequestedSpeed": 60,
+      "ActualPosition": 16.57999999999994,
+      "ActualVelocity": -60.00000000000018,
+      "RenderedPositionEstimate": 13.142857142857142,
+      "Step": 50,
+      "SourceBmpSha256": "430E7E47B9BA5CA4A113BA24ED58BEBB6F90B9C4A19448C720F41A36C047A7FF",
+      "PlaybackDelayCentiseconds": 25
+    },
+    {
+      "File": "60-059.bmp",
+      "ObservedAt": "2026-10-13T09:24:44.6745579+08:00",
+      "RequestedSpeed": 60,
+      "ActualPosition": 2.285013333333282,
+      "ActualVelocity": -32.704717340553074,
+      "RenderedPositionEstimate": 3.142857142857143,
+      "Step": 50,
+      "SourceBmpSha256": "A888F701698FB986E33BBC4AD5FB75384B88095E38F4C66D535972BB65A2D6B8",
+      "PlaybackDelayCentiseconds": 24
+    },
+    {
+      "File": "60-060.bmp",
+      "ObservedAt": "2026-10-13T09:24:44.9184613+08:00",
+      "RequestedSpeed": 60,
+      "ActualPosition": 0,
+      "ActualVelocity": -0.09462619911936636,
+      "RenderedPositionEstimate": 0,
+      "Step": 20,
+      "SourceBmpSha256": "B039E9E1377231869D43B341B9DA4851081C5F55E858128D74A28112791DFCD1",
+      "PlaybackDelayCentiseconds": 1
+    }
+  ],
+  "PlcSha256": "7F98C6BE8777E8A8781DF22BECD50D9B8841BAF1A09429CA43208BFF4A8A30D7",
+  "VisuSha256": "022BC8CFDB5F4D56A3AA927F538A1AA8429DDFCD96D14AE4D958502E16492C2E",
+  "Final": {
+    "ActualPosition": 0,
+    "ActualVelocity": 0,
+    "TargetPosition": 0,
+    "Step": 0,
+    "AutoIndex": 3,
+    "Enabled": false,
+    "Homed": true,
+    "AutoActive": false,
+    "Busy": false,
+    "Done": true,
+    "MoveBusy": false,
+    "MoveDone": true,
+    "HomeBusy": false,
+    "HomeDone": true,
+    "StopBusy": false,
+    "StopDone": false,
+    "StopHeld": false,
+    "ResetBusy": false,
+    "ResetDone": true,
+    "CommandAborted": false,
+    "Error": false,
+    "ErrorID": 0,
+    "ApplicationErrorID": 0,
+    "NativeErrorID": 0,
+    "CompletedMoves": 17,
+    "RejectedCommands": 1,
+    "CompletedAutoCycles": 3,
+    "CycleCounter": 61669,
+    "At": "/Date(1791854693872)/"
+  },
+  "Recording": {
+    "File": "nc-motion-recording.gif",
+    "Sha256": "F5CC2DA37109E22EDD69488A6852206E5FA40816166FE447AFA188333CFEFC2A",
+    "FrameCount": 20,
+    "Width": 984,
+    "Height": 180,
+    "DurationSeconds": 4.51,
+    "Method": "Original owned NC visualization captures; original observed frame spacing; palette conversion only; no interpolated or generated motion. One recorded sequence repeats for playback."
+  },
+  "MonitorCsvSha256": "1BF6F31526F54E1D7A3E9BA2CAA5D990B3115E1841147346F44F665F993C787C"
+}

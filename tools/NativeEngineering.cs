@@ -9,6 +9,7 @@ using System.Xml.Linq;
 public static class ServoNativeEngineering
 {
     private const string DemoPlatform = "TwinCAT OS (x64)";
+    private const string DemoAxisXml = "<TreeItem><NcAxisDef><AxisParam><Unit>mm</Unit><Dynamic><Acceleration>240</Acceleration><Deceleration>240</Deceleration><Jerk>1200</Jerk></Dynamic><Velo><Fast>100</Fast><Maximum>100</Maximum></Velo><TargetPosControl><Enable>true</Enable><Range>0.01</Range><Time>0.02</Time></TargetPosControl></AxisParam><Encoder><EncParam><SoftEndMinControl><Enable>true</Enable><Range>0</Range></SoftEndMinControl><SoftEndMaxControl><Enable>true</Enable><Range>100</Range></SoftEndMaxControl></EncParam></Encoder></NcAxisDef></TreeItem>";
     public static string[] CreateAxisAndPlc(object systemManager, string sourceDirectory, string evidenceDirectory)
     {
         // 在 C# 中按 COM IID 转换，避免 PowerShell 对 RCW 的类型转换差异。
@@ -20,7 +21,7 @@ public static class ServoNativeEngineering
         var motion = manager.LookupTreeItem("TINC");
         var task = motion.CreateChild("NC-Task", 1, "", null);
         var axis = task.LookupChild("Axes").CreateChild("ServoAxis", 1, "", null);
-        axis.ConsumeXml("<TreeItem><NcAxisDef><AxisParam><Unit>mm</Unit><Dynamic><Acceleration>80</Acceleration><Deceleration>80</Deceleration><Jerk>400</Jerk></Dynamic><Velo><Fast>50</Fast><Maximum>50</Maximum></Velo><TargetPosControl><Enable>true</Enable><Range>0.01</Range><Time>0.02</Time></TargetPosControl></AxisParam><Encoder><EncParam><SoftEndMinControl><Enable>true</Enable><Range>0</Range></SoftEndMinControl><SoftEndMaxControl><Enable>true</Enable><Range>100</Range></SoftEndMaxControl></EncParam></Encoder></NcAxisDef></TreeItem>");
+        axis.ConsumeXml(DemoAxisXml);
         File.WriteAllText(Path.Combine(evidenceDirectory, "axis-default.xml"), axis.ProduceXml(false));
         var plc = manager.LookupTreeItem("TIPC").CreateChild("ServoPLC", 0, "", "Empty PLC Template");
         var nested = ((ITcProjectRoot)plc).NestedProject;
@@ -99,6 +100,7 @@ public static class ServoNativeEngineering
         var manager=(ITcSysManager7)systemManager;
         if(manager.GetTargetNetId()!="127.0.0.1.10.22") throw new InvalidOperationException("Unexpected demo target.");
         ((ITcConfigManager)manager.ConfigurationManager).ActiveTargetPlatform=DemoPlatform;
+        ConfigureDemoAxis(manager);
         var plc=manager.LookupTreeItem("TIPC").LookupChild("ServoPLC");
         if(plc==null) throw new InvalidOperationException("The owned PLC root is unavailable.");
         var nested=((ITcProjectRoot)plc).NestedProject;
@@ -117,6 +119,13 @@ public static class ServoNativeEngineering
     {
         for(int i=1;i<=parent.ChildCount;i++) if(parent.Child[i].Name==name) return parent.Child[i];
         return parent.CreateChild(name,subtype,"",info);
+    }
+
+    public static void ConfigureDemoAxis(object systemManager)
+    {
+        var manager=(ITcSysManager7)systemManager;
+        if(manager.GetTargetNetId()!="127.0.0.1.10.22")throw new InvalidOperationException("Unexpected simulation target.");
+        manager.LookupTreeItem("TINC^NC-Task SAF^Axes^ServoAxis").ConsumeXml(DemoAxisXml);
     }
 
     public static string CaptureBuildEvidence(object dteObject,string evidenceDirectory)

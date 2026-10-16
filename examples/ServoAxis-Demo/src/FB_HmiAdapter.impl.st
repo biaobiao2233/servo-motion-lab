@@ -30,7 +30,9 @@ IF GVL_Hmi.EnableRequest THEN
     ELSE GVL_Hmi.UiResult := 2; GVL_Hmi.UiRejected := GVL_Hmi.UiRejected + 1; END_IF
 END_IF
 IF GVL_Hmi.AutoRequest THEN
-    IF GVL_Hmi.CanStart THEN GVL_Command.Enable := TRUE; stage := 10; GVL_Hmi.UiResult := 1;
+    IF GVL_Hmi.CanStart THEN
+        GVL_Command.Velocity := GVL_Hmi.Velocity;
+        GVL_Command.Enable := TRUE; stage := 10; GVL_Hmi.UiResult := 1;
     ELSE GVL_Hmi.UiResult := 2; GVL_Hmi.UiRejected := GVL_Hmi.UiRejected + 1; END_IF
 END_IF
 IF GVL_Hmi.HomeRequest THEN

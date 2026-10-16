@@ -4,5 +4,6 @@ examples/ServoAxis-Demo/src/*.st -text
 examples/ServoAxis-Demo/visu/*.TcVIS -text whitespace=-blank-at-eol,space-before-tab,cr-at-eol
 evidence/**/monitor.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
 evidence/**/monitor-core.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
+evidence/**/monitor-animation.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
 tools/*.ps1 -text
 tools/*.psm1 -text

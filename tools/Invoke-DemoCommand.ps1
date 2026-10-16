@@ -1,6 +1,6 @@
 ﻿param(
     [Parameter(Mandatory=$true)][ValidateSet('Status','Enable','Disable','Home','Move','Auto','Stop','ReleaseStop','Reset')][string]$Command,
-    [double]$Position=30.0,[double]$Velocity=20.0,[string]$TwinCatRoot=$env:TWINCAT3DIR
+    [double]$Position=30.0,[double]$Velocity=60.0,[string]$TwinCatRoot=$env:TWINCAT3DIR
 )
 $ErrorActionPreference='Stop'
 Import-Module (Join-Path $PSScriptRoot 'DemoAds.psm1') -Force
@@ -24,6 +24,7 @@ try{
         'Home' {Pulse 'Home'}
         'Move' {Write-Command 'TargetPosition' ([double]$Position);Write-Command 'Velocity' ([double]$Velocity);Pulse 'MoveRequest'}
         'Auto' {
+            Write-Command 'Velocity' ([double]$Velocity)
             Write-Command 'Enable' ([bool]$true)
             $watch=[Diagnostics.Stopwatch]::StartNew()
             while((Read-DemoSymbol $client 'GVL_Monitor.Step' ([uint16])) -notin @(10,20)){

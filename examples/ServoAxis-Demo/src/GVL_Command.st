@@ -8,5 +8,5 @@ VAR_GLOBAL
     ReleaseStop : BOOL;             // 上升沿解除应用停止保持
     Reset : BOOL;                   // 上升沿错误复位；不会自动恢复运动
     TargetPosition : LREAL := 30.0;
-    Velocity : LREAL := 20.0;        // mm/s，允许 0 < v <= 50
+    Velocity : LREAL := 60.0;        // 仿真展示默认 60 mm/s，允许 0 < v <= 100
 END_VAR

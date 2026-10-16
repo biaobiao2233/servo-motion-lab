@@ -48,8 +48,12 @@ CASE Step OF
         IF NOT Enable THEN
             Step := 0;
         ELSIF NOT requestStop AND NOT StopHeld AND (ApplicationErrorID = 0) AND (NativeErrorID = 0) THEN
-            IF edgeHome.Q OR edgeAuto.Q THEN
+            IF edgeAuto.Q AND NOT ((RequestedVelocity > 0.0) AND (RequestedVelocity <= 100.0)) THEN
+                ApplicationErrorID := 16#A004; // 自动/手动使用同一速度范围检查
+                RejectedCommands := RejectedCommands + 1;
+            ELSIF edgeHome.Q OR edgeAuto.Q THEN
                 AutoActive := edgeAuto.Q;
+                IF edgeAuto.Q THEN velocity := RequestedVelocity; END_IF // 一次序列锁存操作者速度
                 AutoIndex := 1;
                 homeExecute := TRUE;
                 Done := FALSE;
@@ -61,7 +65,7 @@ CASE Step OF
                 IF NOT ((RequestedPosition >= 0.0) AND (RequestedPosition <= 100.0)) THEN
                     ApplicationErrorID := 16#A001; // 软件位置范围拒绝；不发送 MC_MoveAbsolute
                     RejectedCommands := RejectedCommands + 1;
-                ELSIF NOT ((RequestedVelocity > 0.0) AND (RequestedVelocity <= 50.0)) THEN
+                ELSIF NOT ((RequestedVelocity > 0.0) AND (RequestedVelocity <= 100.0)) THEN
                     ApplicationErrorID := 16#A004;
                     RejectedCommands := RejectedCommands + 1;
                 ELSIF NOT Homed THEN
@@ -86,7 +90,7 @@ CASE Step OF
             2: TargetPosition := 80.0;
             3: TargetPosition := 0.0;
         END_CASE
-        velocity := 20.0;
+        // 使用启动时锁存的自定义速度；各段仍等待实际 MoveDone。
         moveExecute := TRUE;
         MoveDone := FALSE;
         Step := 50;
@@ -112,8 +116,8 @@ fbPower(Axis := Axis, Enable := Enable OR ((Step >= 60) AND (Step <= 62)),
         Enable_Positive := TRUE, Enable_Negative := TRUE, Override := 100.0);
 fbHome(Axis := Axis, Execute := homeExecute, Position := 0.0, HomingMode := MC_Direct);
 fbMove(Axis := Axis, Execute := moveExecute, Position := TargetPosition,
-       Velocity := velocity, Acceleration := 80.0, Deceleration := 80.0, Jerk := 400.0);
-fbStop(Axis := Axis, Execute := stopExecute, Deceleration := 100.0, Jerk := 500.0);
+       Velocity := velocity, Acceleration := 240.0, Deceleration := 240.0, Jerk := 1200.0);
+fbStop(Axis := Axis, Execute := stopExecute, Deceleration := 300.0, Jerk := 1500.0);
 fbReset(Axis := Axis, Execute := resetExecute);
 
 // 读取本周期真实反馈。MC_Stop 的 Done 与 Busy 可以同时为 TRUE。

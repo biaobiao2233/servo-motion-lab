@@ -58,7 +58,7 @@ VAR
     moveExecute : BOOL;
     stopExecute : BOOL;
     resetExecute : BOOL;
-    velocity : LREAL := 20.0;
+    velocity : LREAL := 60.0;
     requestStop : BOOL;
     currentNativeError : UDINT;
 END_VAR
